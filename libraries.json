@@ -398,14 +398,12 @@
   "authors": {
     "adam-coster": {
       "name": "Adam Coster",
-      "affiliations": ["Butterscotch Shenanigans"],
       "github": "adam-coster",
       "twitter": "costerad",
       "website": "https://bscotch.net/about#adam-coster"
     },
     "shi-chen": {
       "name": "Shi Chen",
-      "affiliations": ["Butterscotch Shenanigans"],
       "github": "shichen85",
       "website": "https://bscotch.net/about#shi-chen"
     },

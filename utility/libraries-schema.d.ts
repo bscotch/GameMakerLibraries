@@ -76,10 +76,6 @@ export interface Author {
    * Discord username
    */
   discord?: string;
-  /**
-   * Companies, communities, or other significant entities the author is a member of.
-   */
-  affiliations?: string[];
 }
 export interface AGameMakerLibrary {
   /**

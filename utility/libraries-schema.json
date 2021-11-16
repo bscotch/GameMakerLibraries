@@ -74,11 +74,6 @@
           "type": "string",
           "$comment": "The pattern is from https://ihateregex.io/expr/discord-username/",
           "pattern": "^.{3,32}#[0-9]{4}$"
-        },
-        "affiliations": {
-          "description": "Companies, communities, or other significant entities the author is a member of.",
-          "type": "array",
-          "items": { "type": "string" }
         }
       }
     },
