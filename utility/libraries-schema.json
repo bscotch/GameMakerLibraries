@@ -78,7 +78,7 @@
       }
     },
     "library": {
-      "title": "A GameMaker library",
+      "title": "GameMaker library",
       "type": "object",
       "additionalProperties": false,
       "required": ["title", "url"],

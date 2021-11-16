@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "node utility/compile.js",
+    "ingest": "node utility/ingestResourceForm.js",
     "preversion": "echo \"Versioning logic not implemented\" && exit 1"
   },
   "repository": {
@@ -20,12 +21,14 @@
   },
   "homepage": "https://github.com/JujuAdams/GameMakerLibraries#readme",
   "devDependencies": {
+    "@actions/github": "^5.0.0",
     "@bscotch/utility": "^2.1.0",
     "@types/node": "^16.11.6",
     "ajv": "^8.6.3",
     "ajv-formats": "^2.1.1",
     "common-tags": "^1.8.0",
     "json-schema-to-typescript": "^10.1.5",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "yaml": "^1.10.2"
   }
 }

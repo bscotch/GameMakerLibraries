@@ -29,7 +29,7 @@ url:
 # [recommended] Which GameMaker versions is this resource useful for? Delete any incompatible versions.
 compatibility: [8, Studio, Studio 2, Studio 2.3]
 
-# [recommended] Tags are used to group, filter, and sort resources by useful features. Delete any tags that don't apply to this resource. If you need additional tags, go ahead and provide them (use kebab case) and they'll be reviewed by project maintainers.
+# [recommended] Tags are used to group, filter, and sort resources by useful features. Delete any tags that don't apply to this resource.
 tags: 
   - asset
   - community

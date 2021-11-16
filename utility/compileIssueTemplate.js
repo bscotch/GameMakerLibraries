@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { undent } = require('@bscotch/utility');
 const { librariesSchemaPath, issueTemplatePath } = require('./paths.js');
-const { readJSON } = require('./utility.js');
+const { readJSON, submissionLabel } = require('./utility.js');
 
 /**
  * @typedef {import('./libraries-schema.js').GameMakerLibraryData} Libraries
@@ -15,7 +15,11 @@ function createSubmissionForm() {
   const schema = readJSON(librariesSchemaPath);
   const tags = schema.definitions.tag.enum;
   const compatibility =
-    schema.definitions.library.properties.compatibility.items.enum;
+    schema.definitions.library.properties.compatibility.items.enum.map(
+      // One of the versions is just an 8, which YAML will interpret as a number
+      // unless we wrap in quotes.
+      (v) => `"${v}"`
+    );
 
   // Even though we want to write custom instructions for each
   // field, *having* those fields is useful since we can assert
@@ -122,7 +126,7 @@ exports.compileIssueTemplate = function compileIssueTemplate() {
     name: Add a library
     about: Add or edit a library
     title: ''
-    labels: 'upgrade :gear:'
+    labels: '${submissionLabel}'
     assignees: ''
     ---
     

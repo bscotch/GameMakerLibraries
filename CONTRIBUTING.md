@@ -37,3 +37,8 @@ To get the most assistance with editing this project, either to edit library inf
 You don't even need to install VSCode to use it, GitHub lets you open up a GitHub project in VSCode right inside your browser! To do so, navigate to the project's GitHub page and hit the `.` key.
 
 Once you've got the project open in VSCode, run `npm install` in the VSCode terminal to install all of the dependencies. Then you can run `npm run compile` whenever you want to test your changes and see how they affect the project. Note that you won't *need* to compile your changes, since this will be done for you by GitHub.
+
+## TODO
+
+- Change the authors-listing mechanism to make referencing and processing a lot easier. Should just use random IDs and assign automagically from submissions (no relying on code editing at all). Can just use a list that way, the same way we're managing libraries. (Libraries probably need ID as well.)
+- Finish getting the form-ingestor working.
