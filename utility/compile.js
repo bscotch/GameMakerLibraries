@@ -8,12 +8,14 @@ const prettier = require('prettier');
 const { unique, readJSON, assert } = require('./utility.js');
 const Ajv = require('ajv').default;
 const addFormats = require('ajv-formats').default;
-const { compileReadme } = require('./compileReadme');
-
-const librariesPath = './libraries.json';
-const librariesSchemaPath = './utility/libraries-schema.json';
-const librariesTypesPath = './utility/libraries-schema.d.ts';
-const tagsPath = './tags.txt';
+const { compileReadme } = require('./compileReadme.js');
+const {
+  librariesPath,
+  librariesSchemaPath,
+  librariesTypesPath,
+  tagsPath,
+} = require('./paths.js');
+const { compileIssueTemplate } = require('./compileIssueTemplate.js');
 
 /**
  * @typedef {import('./libraries-schema.js').GameMakerLibraryData} Libraries
@@ -100,6 +102,7 @@ async function main() {
   const validate = await loadAndUpdateValidator();
   const libraries = loadAndUpdateLibraries(validate);
   compileReadme(libraries);
+  compileIssueTemplate();
 }
 
 main();

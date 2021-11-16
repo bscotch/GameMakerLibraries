@@ -1,7 +1,6 @@
 const fs = require('fs');
 const { stripIndent } = require('common-tags');
-
-const readmePath = './README.md';
+const { readmePath } = require('./paths.js');
 
 /**
  * @typedef {import('./libraries-schema.js').GameMakerLibraryData} Libraries
